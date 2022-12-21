@@ -1,0 +1,27 @@
+la liste des projets est {{pp | length}}
+
+<h1><a href="{% url 'add'  %}">Ajouter</a></h1>
+<table border="2">
+    <tr>
+        <td>Nom</td>
+        <td>Duree</td>
+        <td>Createur</td>
+        <td>Delete</td>
+    </tr>
+    {% for p in pp %}
+    <tr>
+      
+        <td>{{p.nom_projet}}</td>
+        <td>{{p.duree_projet}}</td>
+        <td>{{p.createur.nom}}</td>
+        <td><a href="{% url 'deletep' p.id %}">Delete</a></td>
+       
+    </tr>
+    {% endfor %}
+</table>
+
+
+
+
+
+

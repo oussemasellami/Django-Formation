@@ -1,0 +1,7 @@
+<h1>Ajout de projet</h1>
+<form action="{% url 'add' %}" method="POST">
+    {% csrf_token %}
+    {{form.as_ul}}
+    <input type="submit" value="Ajouter">
+
+</form>
